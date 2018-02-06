@@ -1,6 +1,7 @@
 # Dubbo Spring Boot Project
+## first add test
 
-[Dubbo](https://github.com/alibaba/dubbo) Spring Boot Project makes it easy to create [Spring Boot](https://github.com/spring-projects/spring-boot/) application using Dubbo as RPC Framework. What's more , it aslo provides 
+[Dubbo](https://github.com/alibaba/dubbo) Spring Boot Project makes it easy to create [Spring Boot](https://github.com/spring-projects/spring-boot/) application using Dubbo as RPC Framework. What's more , it aslo provides
 
 * [auto-configure features](dubbo-spring-boot-autoconfigure) (e.g.annotation-driven, auto configuration, externalized configuration).
 * [production-ready features](dubbo-spring-boot-actuator) (e.g.security, health checks, externalized configuration).
@@ -47,7 +48,7 @@ If you don't know about Dubbo , please take a few minutes to learn http://dubbo.
 
 Usually , There are two usage scenarios for Dubbo applications , one is Dubbo service(s) provider , another is Dubbo service(s) consumer, thus let's get a quick start on them.
 
-First of all , we suppose an interface as Dubbo RPC API that  a service provider exports and a service client consumes : 
+First of all , we suppose an interface as Dubbo RPC API that  a service provider exports and a service client consumes :
 
 ```java
 public interface DemoService {
@@ -81,7 +82,7 @@ public class DefaultDemoService implements DemoService {
 
 
 
-then , provides a bootstrap class : 
+then , provides a bootstrap class :
 
 ```java
 @SpringBootApplication
@@ -241,7 +242,7 @@ The main usage of `dubbo-spring-boot-parent` is providing dependencies managemen
 
 ### [dubbo-spring-boot-autoconfigure](dubbo-spring-boot-autoconfigure)
 
-`dubbo-spring-boot-autoconfigure` uses Spring Boot's `@EnableAutoConfiguration` which helps core Dubbo's components to be auto-configured by `DubboAutoConfiguration`. It reduces code, eliminates XML configuration. 
+`dubbo-spring-boot-autoconfigure` uses Spring Boot's `@EnableAutoConfiguration` which helps core Dubbo's components to be auto-configured by `DubboAutoConfiguration`. It reduces code, eliminates XML configuration.
 
 
 
@@ -279,4 +280,3 @@ Dubbo Service will be consumed at Spring WebMVC `Controller` .
 * Demo `Controller` : http://localhost:8080/sayHello?name=HelloWorld
 * [Health Checks](dubbo-spring-boot-actuator#health-checks) : http://localhost:8081/health
 * [Dubbo Endpoint](dubbo-spring-boot-actuator#endpoints) : http://localhost:8081/dubbo
-
